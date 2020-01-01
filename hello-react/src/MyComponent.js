@@ -1,10 +1,7 @@
-//example class Component
-
 import React from "react";
-import App from "./App";
 
-const MyComponent = () => {
-  return <div>나의 새롭고 멋진 컴포넌트</div>;
+const MyComponent = props => {
+  return <div> 안녕하세요. {props.name} 입니다. </div>;
 };
 
 export default MyComponent;
