@@ -1,13 +1,10 @@
-import React from "react";
+// App.js
 
-function App() {
-  const name = "리액트";
-  return (
-    <>
-      <h1>{name} 안녕!</h1>
-      <h2>잘 작동하니?</h2>
-    </>
-  );
-}
+import React from "react";
+import MyComponent from "./MyComponent";
+
+const App = () => {
+  return <MyComponent />;
+};
 
 export default App;
