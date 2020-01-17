@@ -1,11 +1,10 @@
-// App.js
-
+//App.js
 import React, { Component } from "react";
-import Counter from "./Counter";
+import MyComponent from "./MyComponent";
 
 class App extends Component {
   render() {
-    return <Counter />;
+    return <MyComponent name="React">리액트</MyComponent>;
   }
 }
 
