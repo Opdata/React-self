@@ -1,10 +1,10 @@
 //App.js
 import React, { Component } from "react";
-import MyComponent from "./MyComponent";
+import Say from "./Say";
 
 class App extends Component {
   render() {
-    return <MyComponent name="React">리액트</MyComponent>;
+    return <Say />;
   }
 }
 
