@@ -14,10 +14,6 @@ const Say = () => {
     <div>
       <button onClick={onClickEnter}>입장</button>
       <button onClick={onClickLeave}>퇴장</button>
-<<<<<<< HEAD
-=======
-
->>>>>>> b17ad97ccbd9503f156a0f59b1c2426fb8c28a09
       <h1 style={{ color }}>{message}</h1>
       <button style={{ color: "red" }} onClick={() => setColor("red")}>
         빨간색
