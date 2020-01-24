@@ -3,32 +3,37 @@
 import React, { Component } from "react";
 
 class Counter extends Component {
-  state = {
-    number: 0
-  };
+  constructor(props) {
+    super(props);
+    //state 초기값 설정
+    this.state = {
+      number: 0,
+      fiexdNumber: 0
+    };
+  }
 
-  handleIncrease = () => {
-    /*
-      잘못된 방법
-      this.state.number = this.state.number + 1;
-      */
-    this.setState({
-      number: this.state.number + 1
-    });
-  };
-
-  handleDecrease = () => {
-    this.setState({
-      number: this.state.number - 1
-    });
-  };
   render() {
+    const { number, fiexdNumber } = this.state; // state를 조회할때 this.state를 조회
     return (
       <div>
-        <h1>카운터</h1>
-        <div>값: {this.state.number}</div>
-        <button onClick={this.handleIncrease}>+</button>
-        <button onClick={this.handleDecrease}>-</button>
+        <h1>{number}</h1>
+        <h2>바뀌지 않는 값 : {fiexdNumber}</h2>
+        <button
+          onClick={() => {
+            this.setState(prevState => {
+              return {
+                number: prevState.number + 1
+              };
+            });
+            //위와 아래는 같은 기능을 한다.
+            //아래 코드는 함수에서 바로 객체로 반환한다는 의미이다.
+            this.setState(prevState => ({
+              number: prevState.number + 1
+            }));
+          }}
+        >
+          +1
+        </button>
       </div>
     );
   }
