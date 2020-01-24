@@ -3,6 +3,10 @@
 import React, { Component } from "react";
 
 class EventPractive extends Component {
+  state = {
+    message: ""
+  };
+
   render() {
     return (
       <div>
@@ -12,11 +16,12 @@ class EventPractive extends Component {
           name="message"
           placeholder="아무거나 입력"
           onChange={e => {
-            console.log(e);
+            this.setState({ message: e.target.value });
             //value log
             //console.log(e.target.value);
           }}
         />
+        <h1>{this.state.message}</h1>
       </div>
     );
   }
