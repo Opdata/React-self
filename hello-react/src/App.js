@@ -23,11 +23,16 @@
 import React, { Component } from "react";
 // import EventPractice from "./EventPractice";
 // import RefSample from "./RefSample";
-import ValidationSample from "./ValidationSample";
+// import ValidationSample from "./ValidationSample";
+import Scroll from "./Scroll";
 
 class App extends Component {
   render() {
-    return <ValidationSample />;
+    return (
+      <div>
+        <Scroll />
+      </div>
+    );
   }
 }
 
