@@ -90,46 +90,96 @@
 
 //버튼 클릭 텍스트 렌더링 예제 가독성 높히기
 
+// import React, { Component } from "react";
+
+// class EventPractive extends Component {
+//   state = {
+//     othermessage: "",
+//     outmessage: ""
+//   };
+
+//   constructor(props) {
+//     super(props);
+//     this.onChange = this.onChange.bind(this);
+//     this.onClick = this.onClick.bind(this);
+//   }
+
+//   onChange(e) {
+//     this.setState({
+//       othermessage: e.target.value
+//     });
+//   }
+
+//   onClick() {
+//     this.setState({
+//       outmessage: this.state.othermessage
+//     });
+//   }
+//   render() {
+//     return (
+//       <div>
+//         <h1>버튼 클릭시 텍스트 렌더링</h1>
+//         <input
+//           type="text"
+//           name="message"
+//           placeholder="작성 후 버튼 클릭"
+//           onChange={this.onChange}
+//         />
+//         <button onClick={this.onClick}>>확인</button>
+//         <h1>{this.state.outmessage}</h1>
+//       </div>
+//     );
+//   }
+// }
+
+// 여러 input 다루기
+
 import React, { Component } from "react";
 
-class EventPractive extends Component {
+class EventPractice extends Component {
   state = {
-    othermessage: "",
-    outmessage: ""
+    username: "",
+    message: ""
   };
 
-  constructor(props) {
-    super(props);
-    this.onChange = this.onChange.bind(this);
-    this.onClick = this.onClick.bind(this);
-  }
-
-  onChange(e) {
+  handleChange = e => {
     this.setState({
-      othermessage: e.target.value
+      [e.target.name]: e.target.value
     });
-  }
+    console.log("name :" + e.target.name);
+    console.log("value :" + e.target.value);
+  };
 
-  onClick() {
+  handleClick = () => {
+    alert(this.state.username + ":" + this.state.message);
     this.setState({
-      outmessage: this.state.othermessage
+      username: "",
+      message: ""
     });
-  }
+  };
+
   render() {
     return (
       <div>
-        <h1>버튼 클릭시 텍스트 렌더링</h1>
+        <h1> 이벤트 연습 </h1>
+        <input
+          type="text"
+          name="username"
+          placeholder="사용자명"
+          value={this.state.username}
+          onChange={this.handleChange}
+        />
         <input
           type="text"
           name="message"
-          placeholder="작성 후 버튼 클릭"
-          onChange={this.onChange}
+          placeholder="아무거나 입력해 보세요"
+          value={this.state.message}
+          onChange={this.handleChange}
         />
-        <button onClick={this.onClick}>>확인</button>
-        <h1>{this.state.outmessage}</h1>
+        <button onClick={this.handleClick}>확인</button>
       </div>
     );
   }
 }
 
-export default EventPractive;
+export default EventPractice;
