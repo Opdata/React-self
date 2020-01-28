@@ -30,7 +30,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Scroll />
+        <Scroll ref={ref => (this.scroll = ref)} />
+        <button onClick={() => this.scroll.scrollBottom()}>맨 밑으로</button>
       </div>
     );
   }
