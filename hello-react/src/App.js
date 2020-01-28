@@ -20,11 +20,14 @@
 
 // export default App;
 
-import React from "react";
-import EventPractive from "./EventPractice";
+import React, { Component } from "react";
+// import EventPractice from "./EventPractice";
+import RefSample from "./RefSample";
 
-const App = () => {
-  return <EventPractive />;
-};
+class App extends Component {
+  render() {
+    return <RefSample />;
+  }
+}
 
 export default App;
