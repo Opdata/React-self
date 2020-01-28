@@ -22,11 +22,12 @@
 
 import React, { Component } from "react";
 // import EventPractice from "./EventPractice";
-import RefSample from "./RefSample";
+// import RefSample from "./RefSample";
+import ValidationSample from "./ValidationSample";
 
 class App extends Component {
   render() {
-    return <RefSample />;
+    return <ValidationSample />;
   }
 }
 
