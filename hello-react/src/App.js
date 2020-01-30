@@ -20,21 +20,28 @@
 
 // export default App;
 
-import React, { Component } from "react";
-// import EventPractice from "./EventPractice";
-// import RefSample from "./RefSample";
-// import ValidationSample from "./ValidationSample";
-import Scroll from "./Scroll";
+// import React, { Component } from "react";
+// // import EventPractice from "./EventPractice";
+// // import RefSample from "./RefSample";
+// // import ValidationSample from "./ValidationSample";
+// import Scroll from "./Scroll";
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <Scroll ref={ref => (this.scroll = ref)} />
-        <button onClick={() => this.scroll.scrollBottom()}>맨 밑으로</button>
-      </div>
-    );
-  }
-}
+// class App extends Component {
+//   render() {
+//     return (
+//       <div>
+//         <Scroll ref={ref => (this.scroll = ref)} />
+//         <button onClick={() => this.scroll.scrollBottom()}>맨 밑으로</button>
+//       </div>
+//     );
+//   }
+// }
+
+import React from "react";
+import Iteration from "./Iteration";
+
+const App = () => {
+  return <Iteration />;
+};
 
 export default App;
